@@ -1,0 +1,27 @@
+language: none
+
+
+build:
+  ci:
+    - find . -name '*.sh' -type f | xargs chmod +x
+    - ./build.sh
+
+
+integrations:
+  hub:
+    - integrationName: vv-docker-hub-integration
+      type: docker
+
+  notifications:
+    - integrationName: email
+      type: email
+      on_success: never
+      on_failure: never
+      on_pull_request: never
+
+    - integrationName: vv-slack-integration
+      type: slack
+      recipients:
+        - "#ci_builds"
+      on_success: change
+      on_failure: always
