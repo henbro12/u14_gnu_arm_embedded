@@ -2,7 +2,7 @@
 Docker image for GNU ARM Embedded (C/C++) on Ubuntu 14.04
 
 This repository is automatically build into an image on the Docker Hub.  
-<a href="https://hub.docker.com/r/vidavidorra/u14_gnu_arm_embedded/" target="_blank"> <img src="https://www.docker.com/sites/default/files/legal/small_h.png" alt="docker"/> </a>
+<a href="https://hub.docker.com/r/henbro12/u14_gnu_arm_embedded/" target="_blank"> <img src="https://www.docker.com/sites/default/files/legal/small_h.png" alt="docker"/> </a>
 
 ## Build status
 | Branch  | Status                                         |
@@ -43,7 +43,7 @@ language: none
 
 build:
   pre_ci_boot:
-    image_name: vidavidorra/u14_gnu_arm_embedded
+    image_name: henbro12/u14_gnu_arm_embedded
     image_tag: latest
     pull: true
 
@@ -54,14 +54,14 @@ build:
 ### Local
 Running this image locally in an interactive terminal session
 ```shell
-Jeroens-MacBook-Pro:~ jdebruijn$ docker pull vidavidorra/u14_gnu_arm_embedded
-Jeroens-MacBook-Pro:~ jdebruijn$ docker run --rm -it vidavidorra/u14_gnu_arm_embedded
+airvanhenrico:~ henrico$ docker pull henbro12/u14_gnu_arm_embedded
+airvanhenrico:~ henrico$ docker run --rm -it henbro12/u14_gnu_arm_embedded
 root@e712f34768ed:/# arm-none-eabi-gcc --version
 ```
 or even as non-interactive session.
 ```shell
-Jeroens-MacBook-Pro:~ jdebruijn$ docker pull vidavidorra/u14_gnu_arm_embedded
-Jeroens-MacBook-Pro:~ jdebruijn$ docker run --rm vidavidorra/u14_gnu_arm_embedded -c "arm-none-eabi-gcc --version"
+airvanhenrico:~ henrico$ docker pull henbro12/u14_gnu_arm_embedded
+airvanhenrico:~ henrico$ docker run --rm henbro12/u14_gnu_arm_embedded -c "arm-none-eabi-gcc --version"
 ```
 
 
