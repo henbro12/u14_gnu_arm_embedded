@@ -1,35 +1,25 @@
 #!/bin/bash -e
 
-echo "================================ Clean apt-get ================================="
-apt-get clean
-mv /var/lib/apt/lists /tmp
-mkdir -p /var/lib/apt/lists/partial
-apt-get clean
-apt-get update
-echo "=============================== Cleaned apt-get ================================"
+# Install Boost and add it to the path.
+#
+# Author   : Jeroen de Bruijn
+# Date     : 19 March 2017, 16:16
+# Version  : 1.2
+#
+# Changelog
+# Changes since v1.1
+#   - Use -nv instead of --no-verbose because it looks cleaner.
+#   - Don't append PATH since it is now set in the Dockerfile. Otherwise would be getting double entries.
+# Changes since v1.0
+#   - Just append BOOST_ROOT to .bashrc. The path is now also set in the Dockerfile.
 
-echo "=============================== Installing gcc 6 ==============================="
-add-apt-repository ppa:ubuntu-toolchain-r/test
-apt-get update
-apt-get install gcc-6 g++-6
-update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 50 --slave /usr/bin/g++ g++ /usr/bin/g++-6
-update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-6 50
-gcc --version
-echo "========================= Successfully Installed gcc 6 ========================="
+boost_version=1.63.0
+boost_name=boost_1_63_0
 
-echo "=============================== Installing gcovr ==============================="
-pip install gcovr
-gcovr --version
-echo "========================= Successfully installed gcovr ========================="
-
-echo "========================= Installing GNU ARM Embedded =========================="
-. /u14_gnu_arm_embedded/gnu_arm_embedded/install.sh
-echo "=================== Successfully Installed GNU ARM Embedded ===================="
-
-echo "============================== Installing Doxygen =============================="
-. /u14_gnu_arm_embedded/doxygen/install.sh
-echo "======================== Successfully Installed Doxygen ========================"
-
-echo "=============================== Installing Boost ==============================="
-. /u14_gnu_arm_embedded/boost/install.sh
-echo "========================= Successfully Installed Boost ========================="
+wget -nv https://sourceforge.net/projects/boost/files/boost/$boost_version/$boost_name.tar.gz
+tar xfz $boost_name.tar.gz
+rm $boost_name.tar.gz
+cd $boost_name
+./bootstrap.sh --prefix=/usr/local/$boost_name
+./b2 install
+cd .. && rm -r $boost_name

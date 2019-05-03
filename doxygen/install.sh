@@ -22,12 +22,12 @@
 # Changes since v1.0
 #   - Append PATH to both .bashrc and .profile
 
-doxygen_version=1.8.13
+doxygen_version=1.8.15
 
 apt-get install -y \
   graphviz
 
-wget -nv http://ftp.stack.nl/pub/users/dimitri/doxygen-$doxygen_version.linux.bin.tar.gz
+wget -nv http://doxygen.nl/files/doxygen-$doxygen_version.src.tar.gz
 tar xf doxygen-$doxygen_version.linux.bin.tar.gz
 rm doxygen-$doxygen_version.linux.bin.tar.gz
 cp -R doxygen-$doxygen_version /usr/local/
