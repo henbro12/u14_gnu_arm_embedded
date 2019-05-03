@@ -10,7 +10,7 @@ build:
 integrations:
   hub:
     - integrationName: gnu_arm_embedded_docker
-      type: docker
+      type: Docker Cloud
 
   notifications:
     - integrationName: email
