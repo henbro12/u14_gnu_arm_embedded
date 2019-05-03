@@ -5,10 +5,10 @@ This repository is automatically build into an image on the Docker Hub.
 <a href="https://hub.docker.com/r/henbro12/u14_gnu_arm_embedded/" target="_blank"> <img src="https://www.docker.com/sites/default/files/legal/small_h.png" alt="docker"/> </a>
 
 ## Build status
-| Branch  | Status                                         |
-| ------- | ---------------------------------------------- |
-| Master  | [![Build Status][badge-master]][shippable-ci]  |
-| Develop | [![Build Status][badge-develop]][shippable-ci] |
+| Branch  | Status                                                                                              |
+| ------- | --------------------------------------------------------------------------------------------------- |
+| Master  | [![Run Status](https://api.shippable.com/projects/5ccb348db8751000065e433a/badge?branch=master)]()  |
+| Develop |                                                                                                     |
 
 ## Docker tags
 - Releases of this image result in Docker Hub images with the `release-<GitHub release tag>` tag.
