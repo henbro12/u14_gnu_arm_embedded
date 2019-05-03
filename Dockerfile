@@ -1,5 +1,5 @@
 FROM drydock/u14:prod
-MAINTAINER Jeroen de Bruijn <vidavidorra@gmail.com>
+MAINTAINER Henrico Brom <henricobrom@gmail.com>
 
 ENV BOOST_ROOT=/usr/local/boost_1_63_0
 ENV PATH="${PATH}:/usr/local/doxygen-1.8.13/bin"

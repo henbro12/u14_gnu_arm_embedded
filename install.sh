@@ -29,7 +29,3 @@ echo "=================== Successfully Installed GNU ARM Embedded ==============
 echo "============================== Installing Doxygen =============================="
 . /u14_gnu_arm_embedded/doxygen/install.sh
 echo "======================== Successfully Installed Doxygen ========================"
-
-echo "=============================== Installing Boost ==============================="
-. /u14_gnu_arm_embedded/boost/install.sh
-echo "========================= Successfully Installed Boost ========================="

@@ -18,10 +18,3 @@ integrations:
       on_success: never
       on_failure: never
       on_pull_request: never
-
-    - integrationName: vv-slack-integration
-      type: slack
-      recipients:
-        - "#ci_builds"
-      on_success: change
-      on_failure: always

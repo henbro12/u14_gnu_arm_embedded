@@ -11,19 +11,10 @@
 # gcc-arm-none-eabi-4_9-2015q3  | /usr/local
 # ------------------------------------------
 #
-# Author   : Jeroen de Bruijn
-# Date     : 16 February 2017, 22:02
-# Version  : 1.3
-#
-# Changelog
-# Changes since v1.2
-#   - Remove unnecessary sudo.
-#   - Use -nv instead of --no-verbose because it looks cleaner.
-#   - Don't append PATH since it is now set in the Dockerfile. Otherwise would be getting double entries.
-# Changes since v1.1
-#   - Just append PATH to .bashrc. The path is now also set in the Dockerfile.
-# Changes since v1.0
-#   - Append PATH to both .bashrc and .profile
+# Author   : Henrico Brom
+# Date     : 03-05-2019, 20:01
+# Version  : 1.0
+
 
 apt-get install -y \
   lib32z1               \
