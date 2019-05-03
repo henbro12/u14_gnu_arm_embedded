@@ -30,10 +30,6 @@ In addition to the [tools](http://docs.shippable.com/ci/supported/#tools) instal
 | doxygen               | 1.8.13                |
 | gcovr                 | 3.3                   |
 
-| library               | version               |
-| --------------------- | --------------------- |
-| boost                 | 1.63.0                |
-
 ## How to use
 ### Shippable CI
 Since this image is build on top of Shippable's Ubuntu 14.04 base image, it can easily be used in the Shippable CI. The example `shippalbe.yml` file below shows the basic of how to use this image, while the full documentation is available in the [Shippable docs](http://docs.shippable.com/ci/shippableyml/#pre_ci_boot).
@@ -63,10 +59,3 @@ or even as non-interactive session.
 airvanhenrico:~ henrico$ docker pull henbro12/u14_gnu_arm_embedded
 airvanhenrico:~ henrico$ docker run --rm henbro12/u14_gnu_arm_embedded -c "arm-none-eabi-gcc --version"
 ```
-
-
-
-
-[shippable-ci]:     https://app.shippable.com/github/vidavidorra/u14_gnu_arm_embedded
-[badge-master]:     https://api.shippable.com/projects/58b1ce8b734ba00500664990/badge?branch=master
-[badge-develop]:    https://api.shippable.com/projects/58b1ce8b734ba00500664990/badge?branch=develop

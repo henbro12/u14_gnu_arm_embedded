@@ -44,7 +44,7 @@ dockerPush() {
 
 main() {
   createDockerImage
-  dockerPush
+#  dockerPush
 }
 
 main
