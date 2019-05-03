@@ -9,7 +9,7 @@ build:
 
 integrations:
   hub:
-    - integrationName: vv-docker-hub-integration
+    - integrationName: gnu_arm_embedded_docker
       type: docker
 
   notifications:
