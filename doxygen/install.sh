@@ -12,12 +12,12 @@
 # Date     : 03-05-2019, 19:58
 # Version  : 1.0
 
-doxygen_version=1.8.15
+doxygen_version=1.8.13
 
 apt-get install -y \
   graphviz
 
-wget -nv http://doxygen.nl/files/doxygen-$doxygen_version.src.tar.gz
+wget -nv https://sourceforge.net/projects/doxygen/files/rel-$doxygen_version/doxygen-$doxygen_version.linux.bin.tar.gz
 tar xf doxygen-$doxygen_version.linux.bin.tar.gz
 rm doxygen-$doxygen_version.linux.bin.tar.gz
 cp -R doxygen-$doxygen_version /usr/local/
